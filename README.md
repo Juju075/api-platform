@@ -20,7 +20,7 @@
 - Usage security pro
 #
 - GraphQL (graphQlOperation)
-- Audit et Journalisation
+- Audit and logs
 - Fixtures
 - Test PHP Unit
 - Documentation de l’API (Curl)
