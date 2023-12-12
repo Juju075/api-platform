@@ -1,5 +1,7 @@
 # API Platform
-
+<div align="center">
+    <img src="assets/images/api-platform-logo-vector.png">
+</div>
 - Entity
   (validator, relation, collection, lifecycle,    datetime, auto slug) OK
 #
