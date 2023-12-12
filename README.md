@@ -19,7 +19,7 @@
 - Voter
 - Security strategy 
 #
-- GraphQL (graphQlOperation)
+- Activation GraphQL 
 - Audit and logs
 - Fixtures
 - Test PHP Unit
