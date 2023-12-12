@@ -5,7 +5,7 @@
 #
 - Normalisation groups OK
 - Http operations  OK
-- Customised OpenApi (schema)
+- Customised operation OpenApi (Example | schema) 
 - Pagination (auto) and filters OK
 - SearchFilter, properties and groups OK
 - Custom operation w controller
