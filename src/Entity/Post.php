@@ -17,7 +17,6 @@ use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Put;
 use ApiPlatform\Serializer\Filter\GroupFilter;
 use App\Controller\customController;
-use App\Controller\PublishController;
 use App\Entity\Traits\SlugTrait;
 use App\Entity\Traits\Timestampable;
 use App\Repository\PostRepository;
@@ -77,7 +76,6 @@ use Symfony\Component\Validator\Constraints\Valid;
                     ],
                 ]
             ),
-            new Put(),
             new Delete(),
             new Patch(security: "is_granted('ROLE_ADMIN') or object.owner == user"),
             new Put(controller: customController::class)
