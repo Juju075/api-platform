@@ -12,6 +12,7 @@
 - Json Schema specification
 - EventListener
 - Extension
+- Use limitation
 #
 - LOGIN JWT > check for bundle issue
 - login check  generate token
