@@ -1,5 +1,5 @@
 # API Platform
-<div align="center"><a href="https://www.linkedin.com/in/bempime-kheve/"><img src="public/images/linkedinbadge.png"></a></div>
+
 - Entity
   (validator, relation, collection, lifecycle,    datetime, auto slug) OK
 - Normalisation groups OK
