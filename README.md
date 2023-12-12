@@ -19,7 +19,6 @@
 - Voter
 - Security strategy 
 #
-- Activation GraphQL 
 - Audit and logs
 - Fixtures
 - Test PHP Unit
