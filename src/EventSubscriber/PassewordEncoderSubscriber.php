@@ -39,7 +39,7 @@ private $encoder;
         //limite uniquement a des requete post
         $controllerResult = $event->getControllerResult; //on capte le resultat du controller  Notice: Undefined property:
        
-        $method = $event->getRequest()->getMethod(); //method 
+        $method = $event->getRequest()->getMethod();
 
         //Important vas cibler uniquement un POST sur l'entité Client.    
         if ($controllerResult instanceof Client && $method === "POST") {
