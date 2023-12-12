@@ -2,6 +2,7 @@
 
 - Entity
   (validator, relation, collection, lifecycle,    datetime, auto slug) OK
+#
 - Normalisation groups OK
 - add http operations  OK
 - customised OpenApi (schema)
@@ -11,15 +12,12 @@
 - Json Schema specification
 - EventListener
 - Extension
-
-
+#
 - LOGIN JWT > check for bundle issue
 - login check  generate token
 - Voter
 - Usage security pro
-
-
-
+#
 - GraphQL (graphQlOperation)
 - Audit et Journalisation
 - Fixtures
