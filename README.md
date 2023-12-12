@@ -6,7 +6,7 @@
 - add http operations  OK
 - customised OpenApi (schema)
 - Pagination (auto) and filters OK
-- SearchFilter, of properties and groups OK
+- SearchFilter, properties and groups OK
 - Custom endpoint
 - Custom operation w controller
 - Json Schema specification
