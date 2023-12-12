@@ -4,16 +4,14 @@
   (validator, relation, collection, lifecycle,    datetime, auto slug) OK
 - Groups de normalisation (read write) OK
 - add http operations  OK
-- ++person documentation OpenApi (schema)
+- customised OpenApi (schema)
 - Pagination (auto) et filtres OK
-  -Filtre de search, de properties, de groups K
+- Filtre de search, de properties, de groups K
 - Custom endpoint
 - Custom operation (Controllers)
 - Json Schema specification
 - EventListener
 - Extension
-- GraphQL (graphQlOperation)
-- Documentation de l’API (Curl)
 - Fixtures
 - Test PHP Unit
 - Audit et Journalisation
@@ -21,3 +19,5 @@
 - Usage security pro
 - login check  generate token
 - Voter
+- GraphQL (graphQlOperation)
+- Documentation de l’API (Curl)
