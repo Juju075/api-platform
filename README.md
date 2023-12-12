@@ -4,26 +4,26 @@
   (validator, relation, collection, lifecycle,    datetime, auto slug) OK
 #
 - Normalisation groups OK
-- add http operations  OK
-- customised OpenApi (schema)
+- Http operations  OK
+- Customised OpenApi (schema)
 - Pagination (auto) and filters OK
 - SearchFilter, properties and groups OK
 - Custom operation w controller
 - Json Schema specification
 - EventListener
 - Extension
-- Use limitation
+- Use limitation for performance
 #
 - LOGIN JWT > check for bundle issue
 - login check  generate token
 - Voter
-- Usage security pro
+- Security strategy 
 #
 - GraphQL (graphQlOperation)
 - Audit and logs
 - Fixtures
 - Test PHP Unit
-- Documentation de l’API (Curl)
+- API Documentation (Curl)
 #
 ### What i learned?
 
