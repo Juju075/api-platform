@@ -39,7 +39,6 @@
 
 <ul>
     <li><a href="https://github.com/Juju075/php-framework">PHP Natif - custom framework inspired by Symfony</a></li>
-    <li><a href="https://github.com/Juju075/api-rest">Api REST - (ApiPlatform)</a></li>
     <li><a href="#">Javascript Advanced(futur project)</a></li>
     <li><a href="#">Microservices - Symfony microservices deployment on AWS (futur project)</a></li>
 </ul>
