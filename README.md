@@ -11,15 +11,19 @@
 - Json Schema specification
 - EventListener
 - Extension
-- Fixtures
-- Test PHP Unit
-- Audit et Journalisation
+
 
 - LOGIN JWT > check for bundle issue
-- Usage security pro
 - login check  generate token
 - Voter
+- Usage security pro
+
+
+
 - GraphQL (graphQlOperation)
+- Audit et Journalisation
+- Fixtures
+- Test PHP Unit
 - Documentation de l’API (Curl)
 ### What i learned?
 
