@@ -24,7 +24,7 @@
 - Documentation de l’API (Curl)
 ### What i learned?
 
-> use of symfony 6 release, test and deploy my app.
+> ....
 >
 > [Bempime KHEVE](https://www.linkedin.com/in/bempime-kheve/)<br/>
 >
