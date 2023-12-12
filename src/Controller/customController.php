@@ -16,6 +16,13 @@ class customController extends AbstractController
     public function __invoke(Post $post): Post
     {
         // TODO: Implement __invoke() method.
+        // enregistre un nouveau post
     }
+
+    // Validation des donnees @Assert
+    // Ajouter un utilisateur uniquement pour les admin @security
+    // Exeption @catch
+    // Audit enregistrement de log @log
+    // Tranformation des donnees @Transfom
 
 }

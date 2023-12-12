@@ -10,7 +10,7 @@
 - SearchFilter, properties and groups OK
 - Custom operation w controller
 - Json Schema specification
-- EventListener
+- EventListener / PasswordEncoder
 - Extension
 - Use limitation for performance
 #
