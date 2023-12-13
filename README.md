@@ -12,7 +12,7 @@ Issues...
             <td>
                 Demo: <a href="#">en attente</a><br>
                 Screencast demo 1min<br> 
-                Source: <a href="https://github.com/Juju075/symfony-devops">Github repository</a> <br>
+                Source: <a href="https://github.com/Juju075/api-platform">Github repository</a> <br>
                 Source (deploy): <br>
                 Docker image: https://hub.docker.com/r/ <br>
             </td>
@@ -21,10 +21,11 @@ Issues...
                 </em>
                 <p>App to deploy:</p>
                 <ul>
-                <li>web app container with PHP 8.1v .</li>
+                <li>PHP 8.1v .</li>
                 <li>Database container with a MySQL 8.0v.</li>
                 </ul>
             </td>
+        </tr>
         </tr>
     </table>
 </div>

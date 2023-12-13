@@ -135,6 +135,9 @@ class Post
     ]
     private ?Category $category = null;
 
+    #[ORM\ManyToOne(inversedBy: 'posts')]
+    private ?User $User = null;
+
 
     public function validationGroups(self $post)
     {
@@ -224,4 +227,16 @@ class Post
 //    {
 //        return ['create:Post'];
 //    }
+
+public function getUser(): ?User
+{
+    return $this->User;
+}
+
+public function setUser(?User $User): static
+{
+    $this->User = $User;
+
+    return $this;
+}
 }
