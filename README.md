@@ -1,9 +1,8 @@
 # API Platform
 <div align="center"><a href="https://www.linkedin.com/in/bempime-kheve/">
 <img src="public/assets/images/linkedinbadge.png"></a></div>
-<p>[Get linkedin devops certification]</p>
 <div align="center">
-    <img src="public/assets/images/api-platform-logo-vector.png">
+    <img src="public/assets/images/api-platform-logo-vector.png" width="450">
 </div>
 Issues...
 
@@ -29,31 +28,34 @@ Issues...
         </tr>
     </table>
 </div>
-- Entity
-  (validator, relation, collection, lifecycle,    datetime, auto slug) OK
-#
-- Normalisation groups OK
-- Http operations  OK
-- Customised operation OpenApi (Example | schema) 
-- Pagination (auto) and filters OK
-- SearchFilter, properties and groups OK
-- Custom operation w controller
-- Json Schema specification
-- EventListener / PasswordEncoder OK
-- Extension
-- Use limitation for performance
-#
-- LOGIN JWT > check for bundle issue
-- login check  generate token
-- Voter
-- Security strategy 
-#
-- Audit and logs
-- Fixtures
-- Test PHP Unit
-- API Documentation (Curl)
-#
-### What i learned?
+<div>
+- Entity<br>
+  (validator, relation, collection, lifecycle,    datetime, auto slug) OK<br>
+<br><br>
+- Normalisation groups OK<br>
+- Http operations  OK<br>
+- Customised operation OpenApi (Example | schema) <br>
+- Pagination (auto) and filters OK<br>
+- SearchFilter, properties and groups OK<br>
+- Custom operation w controller<br>
+- Json Schema specification<br>
+- EventListener / PasswordEncoder OK<br>
+- Extension<br>
+- Use limitation for performance<br>
+<br><br>
+- LOGIN JWT > check for bundle issue<br>
+- login check  generate token<br>
+- Voter<br>
+- Security strategy <br>
+<br><br>
+- Audit and logs<br>
+- Fixtures<br>
+- Test PHP Unit<br>
+- API Documentation (Curl)<br>
+<br><br>
+### What i learned?<br>
+</div>
+
 
 > ....
 >
