@@ -1,6 +1,33 @@
 # API Platform
+<div align="center"><a href="https://www.linkedin.com/in/bempime-kheve/">
+<img src="public/assets/images/linkedinbadge.png"></a></div>
+<p>[Get linkedin devops certification]</p>
 <div align="center">
-    <img src="assets/images/api-platform-logo-vector.png">
+    <img src="public/assets/images/api-platform-logo-vector.png">
+</div>
+Issues...
+
+<div align="center">
+    <table>
+        <tr>
+            <td>
+                Demo: <a href="#">en attente</a><br>
+                Screencast demo 1min<br> 
+                Source: <a href="https://github.com/Juju075/symfony-devops">Github repository</a> <br>
+                Source (deploy): <br>
+                Docker image: https://hub.docker.com/r/ <br>
+            </td>
+            <td>
+                <em>
+                </em>
+                <p>App to deploy:</p>
+                <ul>
+                <li>web app container with PHP 8.1v .</li>
+                <li>Database container with a MySQL 8.0v.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </div>
 - Entity
   (validator, relation, collection, lifecycle,    datetime, auto slug) OK

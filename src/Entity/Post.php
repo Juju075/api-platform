@@ -78,7 +78,10 @@ use Symfony\Component\Validator\Constraints\Valid;
             ),
             new Delete(),
             new Patch(security: "is_granted('ROLE_ADMIN') or object.owner == user"),
-            new Put(controller: customController::class)
+            new Put
+            (
+                controller: customController::class
+            )
         ],
         normalizationContext: ['groups' => ['read:collection']],
         validationContext: ['groups' => ['write:Post']],
