@@ -43,6 +43,7 @@ Issues...
 - EventListener / PasswordEncoder OK<br>
 - Extension<br>
 - Use limitation for performance<br>
+- Upload files<br>
 <br><br>
 - LOGIN JWT > check for bundle issue<br>
 - login check  generate token<br>
