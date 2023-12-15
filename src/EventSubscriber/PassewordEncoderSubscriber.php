@@ -1,8 +1,10 @@
 <?php
 
 namespace App\EventSubscriber;
+use ApiPlatform\Symfony\EventListener\EventPriorities;
 use App\Entity\Client;
 
+use http\Client\Request;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 use ApiPlatform\Core\EventListener\EventPriorities;
@@ -36,24 +38,29 @@ private $encoder;
      */
     public function encodePassword(ViewEvent $event): void
     {
-        //limite uniquement a des requete post
-        $controllerResult = $event->getControllerResult; //on capte le resultat du controller  Notice: Undefined property:
-       
+        $controllerResult = $event->getControllerResult(); //on capte le resultat du controller
         $method = $event->getRequest()->getMethod();
 
-        //Important vas cibler uniquement un POST sur l'entité Client.    
-        if ($controllerResult instanceof Client && $method === "POST") {
+        if (
+            $controllerResult instanceof User && in_array
+                (
+                    $method,
+                    [
+                        Request::METHOD_POST,Request::METHOD_PUT,Request::METHOD_PATCH
+                    ]
+                )
+        )
+        {
            //$hash = $this->encoder->encodePassword($controllerResult, $controllerResult->getPassword()); //Returns the password used to authenticate the user.
            $hash = $this->encoder->hashPassword($controllerResult, $controllerResult->getPassword()); //Returns the password used to authenticate the user.
            $controllerResult->setPassword($hash);
         }
     }
 
-    //Apiplatform events    
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
-            //KernelEvents::VIEW => ['encodePassword', EventPriorities::PRE_WRITE],
+            KernelEvents::VIEW => ['encodePassword', EventPriorities::PRE_WRITE],
         ];
         
     }

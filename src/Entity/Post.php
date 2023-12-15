@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 use ApiPlatform\Doctrine\Orm\Filter\DateFilter;
 use ApiPlatform\Doctrine\Orm\Filter\OrderFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
@@ -41,6 +43,7 @@ use Symfony\Component\Validator\Constraints\Valid;
         //groups "admin" "author" "users"
         //seul les admin peuvent delete
         operations: [
+            //Ajouter des filtres
             new GetCollection(),
             new Get(),
             new \ApiPlatform\Metadata\Post
@@ -77,10 +80,15 @@ use Symfony\Component\Validator\Constraints\Valid;
                 ]
             ),
             new Delete(),
-            new Patch(security: "is_granted('ROLE_ADMIN') or object.owner == user"),
-            new Put
+            #new Patch(security: "is_granted('ROLE_ADMIN') or object.owner == user"),
+            #Modification du mot de pass user
+            new Patch
             (
-                controller: customController::class
+                uriTemplate: '/user/idi/{id}',
+                controller: customController::class,
+                normalizationContext: ['groups'=>'idi'],
+                denormalizationContext: ['groups'=>'idi'],
+                name: 'idi',
             )
         ],
         normalizationContext: ['groups' => ['read:collection']],
@@ -88,15 +96,17 @@ use Symfony\Component\Validator\Constraints\Valid;
         paginationItemsPerPage: 2),
 
 ]
+
+//GetCollection et Get
 //Trie order  asc et desc de  id et title
-#[ApiFilter(OrderFilter::class,properties: ['id','title'])]
+#[ApiFilter(OrderFilter::class, properties: ['id'=>'DESC','title'=>'DESC'])]
 
 //Trie order asc et desc de title string
 #[ApiFilter(SearchFilter::class, properties: ['title' => 'partial'])]
 
 //createdAt[before]  createdAt[strictly_before] format en string
 //createdAt[after] ... createdAt[strictly_after]
-#[ApiFilter(DateFilter::class,properties: ['createdAt'=>'after'])]
+#[ApiFilter(DateFilter::class, properties: ['createdAt'=>'after'])]
 
 //Trie de group argument
 #[ApiFilter(GroupFilter::class,
@@ -116,12 +126,15 @@ class Post
 
     // min 5 caractere uniquement si creation d'un post  start end date filter
     #[ORM\Column(length: 255)]
+
     #[
         Groups(['read:collection']),
         Length(min: 5, groups: ['create:Post']),
-        ApiProperty(openapiContext: ['type' => '', 'description' => ['']])
+        ApiProperty(openapiContext: ['type' => '', 'description' => ['']]),
+        Assert\NotBlank(message: 'ici votre titre'),
+        #ApiFilter(SearchFilter::class, strategy: 'partial')
     ]
-    private ?string $title = null;
+    private ?string $title;
 
     #[ORM\Column(type: Types::TEXT)]
     #[Groups(['read:collection'])]

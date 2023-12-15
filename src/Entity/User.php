@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\Patch;
+use App\Controller\customController;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -19,6 +21,14 @@ use Symfony\Component\Serializer\Annotation\Groups;
     operations:
     [
         new Get(),
+        new Patch
+        (
+            uriTemplate: '/user/change_password/{id}',
+            controller: customController::class,
+            normalizationContext: ['groups'=>'change_password'],
+            denormalizationContext: ['groups'=>'change_password'],
+            name: 'change password',
+        )
     ],
     normalizationContext: ['groups'=>['read:collection']]
 )]
@@ -40,6 +50,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[Groups(['groups'=>'change_password'])]
     private ?string $password = null;
 
     #[ORM\Column(type: Types::TEXT)]
